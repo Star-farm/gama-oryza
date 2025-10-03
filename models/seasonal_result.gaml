@@ -38,11 +38,12 @@ global {
     }
     
     list<float> get_column_values(matrix data, int col_index) {
-    	list<float> values <- [];
-    	loop i from: 0 to: data.rows - 1 {
-    		values <- values + float(data[col_index, i]);
-    	}
-    	return values;
+    		list<float> values <- [];
+	    	loop i from: 0 to: data.rows - 1 {
+	    		values <- values + float(data[col_index, i]);
+	    	}
+	    	
+	    	return values;
     }
 }
 
@@ -87,7 +88,7 @@ experiment "Irrigation" type: gui {
                 data "AWD Scenario 1" value: get_column_values(awd_s1, IRCUM) color: #red;
                 data "CF Scenario 2" value: get_column_values(cf_s2, IRCUM) color: #darkblue;
                 data "AWD Scenario 2" value: get_column_values(awd_s2, IRCUM) color: #darkred;
-                data "CF Scenario 3" value: get_column_values(cf_s3, IRCUM) color: #dodgerblue;
+                //data "CF Scenario 3" value: get_column_values(cf_s3, IRCUM) color: #dodgerblue;
                 data "AWD Scenario 3" value: get_column_values(awd_s3, IRCUM) color: #coral;
             }
         }
@@ -102,7 +103,7 @@ experiment "Methane" type: gui {
                 data "AWD Scenario 1" value: get_column_values(awd_s1, S_CH4C) color: #red;
                 data "CF Scenario 2" value: get_column_values(cf_s2, S_CH4C) color: #darkblue;
                 data "AWD Scenario 2" value: get_column_values(awd_s2, S_CH4C) color: #darkred;
-                data "CF Scenario 3" value: get_column_values(cf_s3, S_CH4C) color: #dodgerblue;
+                //data "CF Scenario 3" value: get_column_values(cf_s3, S_CH4C) color: #dodgerblue;
                 data "AWD Scenario 3" value: get_column_values(awd_s3, S_CH4C) color: #coral;
             }
         }

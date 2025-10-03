@@ -1,0 +1,164 @@
+Here's the GAMA code that visualize ORYZA daily result. However I have 3 scenarios: base-line, increasing of temperature, changing awd threshold. And each scenario has 2 irrigation techniques: AWD and CF. For now in a simulation, I created 2 experiments: 1 that visualize the water level and LAI, 2 that visualize the chart: CH4, N2O, CO2, SOC. The second experiment seems okay now. For the first experiment, I want to have 2 independence plot visual maps corresponding each irrigation technique, so can you modify the code for me
+// Modified plot species with separate aspects for each irrigation regime
+species plot {
+    int plot_id;
+    string regime;
+    float water_level_s1 <- 0.0;
+    float water_level_s2 <- 0.0;
+    
+    // Aspect for CF plots
+    aspect cf_display {
+        if (regime = REGIME_CF) {
+            rgb plot_color <- calculate_water_color_cf();
+            draw shape color: plot_color border: #black width: 2;
+            draw string(plot_id) color: #white size: 12 at: location;
+            
+            string scenario_1_name <- SCENARIO_NAMES[scenario_1];
+            string scenario_2_name <- SCENARIO_NAMES[scenario_2];
+            
+            draw string(scenario_1_name + ": " + water_level_s1 with_precision 1 + "mm")
+                color: #white size: 10 at: {location.x, location.y - 10};
+            draw string(scenario_2_name + ": " + water_level_s2 with_precision 1 + "mm")
+                color: #yellow size: 10 at: {location.x, location.y - 20};
+            
+            // Add regime label
+            draw string("CF") color: #red size: 8 at: {location.x, location.y + 15};
+        }
+    }
+    
+    // Aspect for AWD plots  
+    aspect awd_display {
+        if (regime = REGIME_AWD) {
+            rgb plot_color <- calculate_water_color_awd();
+            draw shape color: plot_color border: #black width: 2;
+            draw string(plot_id) color: #white size: 12 at: location;
+            
+            string scenario_1_name <- SCENARIO_NAMES[scenario_1];
+            string scenario_2_name <- SCENARIO_NAMES[scenario_2];
+            
+            draw string(scenario_1_name + ": " + water_level_s1 with_precision 1 + "mm")
+                color: #white size: 10 at: {location.x, location.y - 10};
+            draw string(scenario_2_name + ": " + water_level_s2 with_precision 1 + "mm")
+                color: #yellow size: 10 at: {location.x, location.y - 20};
+                
+            // Add regime label
+            draw string("AWD") color: #green size: 8 at: {location.x, location.y + 15};
+        }
+    }
+    
+    // Color calculation based on scenario 1 water level for CF
+    rgb calculate_water_color_cf {
+        float water_level <- water_level_s1; // Use scenario 1 as base for color
+        if (water_level <= 0.0) {
+            return rgb(139, 119, 101); // Brown for dry
+        } else {
+            float water_ratio <- water_level / max_water_level;
+            int blue_intensity <- int(255 - (water_ratio * 205));
+            blue_intensity <- max([50, min([255, blue_intensity])]);
+            int green_component <- int(blue_intensity * 0.3);
+            return rgb(0, green_component, blue_intensity);
+        }
+    }
+    
+    // Color calculation based on scenario 1 water level for AWD  
+    rgb calculate_water_color_awd {
+        float water_level <- water_level_s1; // Use scenario 1 as base for color
+        if (water_level <= 0.0) {
+            return rgb(139, 119, 101); // Brown for dry
+        } else {
+            float water_ratio <- water_level / max_water_level;
+            int blue_intensity <- int(255 - (water_ratio * 205));
+            blue_intensity <- max([50, min([255, blue_intensity])]);
+            int green_component <- int(blue_intensity * 0.4); // Slightly different green tone for AWD
+            return rgb(10, green_component, blue_intensity); // Slightly different base for distinction
+        }
+    }
+}
+
+// Modified water level experiment with separate displays for each irrigation technique
+experiment water_level type: gui {
+    float minimum_cycle_duration <- 0.01#s;
+    
+    // User parameters for scenario selection
+    parameter "Scenario 1" var: scenario_1 category: "Scenario Selection" among: SCENARIOS;
+    parameter "Scenario 2" var: scenario_2 category: "Scenario Selection" among: SCENARIOS;
+    
+    output synchronized: false {
+        layout vertical([
+            horizontal([0::5000, 1::5000])::5000,
+            horizontal([2::5000, 3::5000])::5000
+        ])
+        
+        editors: false toolbars: false;
+        
+        // Display for CF irrigation technique
+        display "Continuous Flooding (CF) - Plots 2, 4, 5" type: 2d {
+            species plot aspect: cf_display;
+            
+            // Add season info overlay
+            overlay position: { 5, 5 } size: { 250, 40 } background: #white transparency: 0.8 border: #black {
+                draw ("Current Season: " + current_season) at: { 10, 25 } color: #black font: font("Arial", 12, #plain);
+            }
+        }
+        
+        // Display for AWD irrigation technique
+        display "Alternate Wetting-Drying (AWD) - Plots 1, 3" type: 2d {
+            species plot aspect: awd_display;
+            
+            // Add season info overlay
+            overlay position: { 5, 5 } size: { 250, 40 } background: #white transparency: 0.8 border: #black {
+                draw ("Current Season: " + current_season) at: { 10, 25 } color: #black font: font("Arial", 12, #plain);
+            }
+        }
+        
+        // Water Level/Temperature Comparison Chart
+        display "Water Level/Temperature Comparison" type: 2d {
+            chart "" type: series background: #white 
+                y_label: "Water level (mm)" y2_label: "Temperature (°C)" {
+                
+                // Scenario 1 data
+                data (SCENARIO_NAMES[scenario_1] + " CF") 
+                    value: get_current_value(scenario_1, REGIME_CF, "water_level") 
+                    color: #blue marker: false style: line;
+                data (SCENARIO_NAMES[scenario_1] + " AWD") 
+                    value: get_current_value(scenario_1, REGIME_AWD, "water_level") 
+                    color: #red marker: false style: line;
+                
+                // Scenario 2 data with dashed lines
+                data (SCENARIO_NAMES[scenario_2] + " CF") 
+                    value: get_current_value(scenario_2, REGIME_CF, "water_level") 
+                    color: #darkblue marker: false style: dot;
+                data (SCENARIO_NAMES[scenario_2] + " AWD") 
+                    value: get_current_value(scenario_2, REGIME_AWD, "water_level") 
+                    color: #darkred marker: false style: dot;
+                
+                // Temperature comparison
+                data (SCENARIO_NAMES[scenario_1] + " Temp") 
+                    value: current_temperature[scenario_1] 
+                    use_second_y_axis: true color: #orange marker: false style: step;
+                data (SCENARIO_NAMES[scenario_2] + " Temp") 
+                    value: current_temperature[scenario_2] 
+                    use_second_y_axis: true color: #darkorange marker: false style: step;
+            }
+        }
+        
+        // LAI Comparison Chart
+        display "LAI Comparison" type: 2d {
+            chart "Leaf Area Index Comparison" type: series background: #white 
+                y_label: "LAI (Leaf Area Index)" {
+                data (SCENARIO_NAMES[scenario_1] + " CF") 
+                    value: get_current_value(scenario_1, REGIME_CF, "lai") 
+                    color: #blue marker: false style: line;
+                data (SCENARIO_NAMES[scenario_1] + " AWD") 
+                    value: get_current_value(scenario_1, REGIME_AWD, "lai") 
+                    color: #red marker: false style: line;
+                data (SCENARIO_NAMES[scenario_2] + " CF") 
+                    value: get_current_value(scenario_2, REGIME_CF, "lai") 
+                    color: #darkblue marker: false style: dot;
+                data (SCENARIO_NAMES[scenario_2] + " AWD") 
+                    value: get_current_value(scenario_2, REGIME_AWD, "lai") 
+                    color: #darkred marker: false style: dot;
+            }
+        }
+    }
+}
