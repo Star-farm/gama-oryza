@@ -56,10 +56,10 @@ A platform that simulate rice crop growth based on inputs like weather, soil typ
 ### Preparing the ORYZA Simulation inputs
 
  - **Weather data**: All the weather data for this simulation is placed in this folder ```oryzatrain\test_data\ORYZA_weather_data\rach_gia```. 
-	![](/images/Screenshot 2025-10-17 111816.png)In ORYZA, weather data file format is organized by **<station_name><station_code>.<year_of_weather_data>**
+	![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-17%20111816.png)In ORYZA, weather data file format is organized by **<station_name><station_code>.<year_of_weather_data>**
 		
 	Here's what the weather file looks like in ORYZA format
-	![](/images/Screenshot 2025-10-17 144307.png)
+	![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-17%20144307.png)
 	There are 9 columns in each weather file
 	Column	Weather variable	               Unit
 		(1) 	Station number		
@@ -202,8 +202,8 @@ For the use of GAMA model, there are 3 GAMA files: ```seasonal_result.gaml```,``
 1: ```seasonal_result.gaml,```
 This GAMA model will visualize the seasonal result (op file) for all 3 scenarios including **Rice Yield; Irrigation; Methane Emission**. 
 There are 3 experiments corresponding to 3 indicators. 
-![](/images/Screenshot 2025-10-24 105525.png)
-![](/images/Screenshot 2025-10-24 105316.png)
+![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20105525.png)
+![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20105316.png)
 	                 Irrigation Experiment for water-use visualization
 
 You can change the path of each op file as you want in```action load_data```
@@ -220,14 +220,14 @@ action load_data {
 2: ```daily_result.gaml```
 This GAMA model will visualize the daily result (res file) and you can choose 2 scenarios to compare the water level, Leaf Area Index (LAI), emission in a selected season together. 
 There are 2 experiments: water_level, emission 
-![](images/Screenshot 2025-10-24 153934.png)
+![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20153934.png)
 	a. **water_level**
 		This experiment contains plot map to visualize the water level for 2 practices. It also has 2 charts to show water level and LAI
-		![](images/Screenshot 2025-10-24 155308.png)
+		![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20155308.png)
 		You can select Scenario and Season to compare the result (reload experiment is required). In Season selection, I still use the season index for selection 
 	b, **emission**
 		This experiment contains 4 charts corresponding for 4 indicators that could be simulated in ORYZA: NO2; CO2; Soil Organic Carbon, CH4
-		![](images/Screenshot 2025-10-24 162713.png)
+		![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20162713.png)
 		You can select Scenario and Season to compare the result (reload experiment is required)
 	
 3: ```eco_model.gaml```
@@ -241,7 +241,7 @@ action load_data {
 So there are 10 rice seasons which are Winter-Spring and Summer-Autumn (double rice) from 2015 - 2020. 
 
 At the beginning of the simulation (Winter-Spring 2015-2016), we initialize a number of farmers who use AWD practice (in this case is 40). Then after every season, CF farmers will compare their own income to the average income of nearby AWD farmers. If the AWD farmers' average income is higher by a certain threshold, the CF farmer will consider switching
-![](/images/Eco.drawio 1.png)
+![](https://github.com/danghh333/gama-oryza/blob/main/images/Eco.drawio%201.png)
 In this model, there are 2 species
 1. Plot
 2. Farmer
@@ -264,14 +264,14 @@ In this model, there are 2 species
 And on the market, there are some factors relating to price/cost. These factors you can change during the simulation
 	- Rice price
 	- Fertilizer cost, seed cost, other cost
-	![](/images/Pasted image 20251024163152.png)
+	![](https://github.com/danghh333/gama-oryza/blob/main/images/Pasted%20image%2020251024163152.png)
 The unit for economic factors is VND
 
 The simulation visual has 3 elements:
 - Plot window: Visualize the change of irrigation practice by farmer
 - AWD Adoption rate chart: Percentage of farmer switching to AWD
 - Income per ha: The change of farmer income per ha between 2 practices
-![](/images/Screenshot 2025-10-24 163239.png)
+![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20163239.png)
 
 
 
