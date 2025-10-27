@@ -60,16 +60,15 @@ A platform that simulate rice crop growth based on inputs like weather, soil typ
 		
 	Here's what the weather file looks like in ORYZA format
 	![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-17%20144307.png)
-	There are 9 columns in each weather file
-	Column	Weather variable	               Unit
-		(1) 	Station number		
-		(2)	Year
-		(3)	Day of year
-		(4)	Solar Radiation		       KJ/m2/day
-		(5)(6)Min/Max Temperature	   *C	
-		(7)	Vapor Pressure		               kPa
-		(8)	Wind Speed		                   m/s
-		(9)	Rainfall		                       mm
+	There are 9 columns in each weather file\
+		(1) 	Station number						\
+		(2)	Year									\
+		(3)	Day of year								\
+		(4)	Solar Radiation		       (KJ/m2/day)	\
+		(5)(6)Min/Max Temperature	   (*C)			\
+		(7)	Vapor Pressure		       (kPa)		\
+		(8)	Wind Speed		           (m/s)		\
+		(9)	Rainfall		           (mm)			
 
 	At the first row of each weather file, it contains information of weather station: longitude; latitude; height, and 2 Angstrom parameters
 
@@ -119,20 +118,20 @@ A platform that simulate rice crop growth based on inputs like weather, soil typ
  	 
 ### Scenarios
 
-You will run the CF and AWD simulations for each of these scenarios to compare their performance
-	1. **Baseline**: This uses the normal weather data and the standard AWD threshold
-	2. **Temperature rises 2℃**: This uses a rerun file that has been modified the weather module to raise the temperature to 2℃ (Apply for both CF and AWD)
+You will run the CF and AWD simulations for each of these scenarios to compare their performance\
+	1. **Baseline**: This uses the normal weather data and the standard AWD threshold\
+	2. **Temperature rises 2℃**: This uses a rerun file that has been modified the weather module to raise the temperature to 2℃ (Apply for both CF and AWD)\
 	3. **AWD Threshold changing**: This scenario only applies to the AWD simulation. The soil water potential has been modified to simulate the lower threshold (e.g., -20cm or -25cm) and let the field drain more
 
 ### How to run the simulation
 
-Select your scenario by choose the corresponding path. I've created 3 folders for 3 scenarios and each folder has 2 rerun files: CF, AWD.
-Scenario 1: ```\oryzatrain\scene1\CF_s1.rer```
-		```\oryzatrain\scene1\AWD_s1.rer```
-Scenario 2: ```\oryzatrain\scene2\CF_s2.rer```
-		``` \oryzatrain\scene2\AWD_s2.rer```
-Scenario 3: ```\oryzatrain\scene3\CF_s3.rer```
-		```\oryzatrain\scene3\AWD_s3.rer```
+Select your scenario by choose the corresponding path. I've created 3 folders for 3 scenarios and each folder has 2 rerun files: CF, AWD.\
+Scenario 1: ```\oryzatrain\scene1\CF_s1.rer```\
+		```\oryzatrain\scene1\AWD_s1.rer```\
+Scenario 2: ```\oryzatrain\scene2\CF_s2.rer```\
+		``` \oryzatrain\scene2\AWD_s2.rer```\
+Scenario 3: ```\oryzatrain\scene3\CF_s3.rer```\
+		```\oryzatrain\scene3\AWD_s3.rer```\
 For example, if you want to simulate **CF** practice when **the temperature rises 2℃**, you will set path of that scenario and practice control file (```CONTROL.DAT```). 
 This file used to control the simulation of ORYZA (Input/Output file path and options for output display)
 ```
@@ -172,6 +171,7 @@ Here's the list of variables in **res.dat** and **op.dat** files
 | SON           | Kg N/ha | Daily soil organic nitrogen total in the soil profile                                   |
 | DOY           |         | Julian day in a year                                                                    |
 | CROPSTA       |         | Crop growth status: 1 for sowing, 2 for seed bed, 3 for transplanting, 4 for main field |
+
 **op.dat**
 
 | Variable name | Unit    | Definition                                              |
@@ -192,16 +192,16 @@ After running ORYZA simulation, I use GAMA to visualize the results from ORYZA a
 
 ORYZA output files have```.dat```format so it is not easy for GAMA to process them. Hence, there are 2 python script files in```python-script```directory used to convert them: ```process_op.py```;```process_res.py```. You can modify the path of input file and output file as you want at the last code line
 
-In ```process_op.py```
-```df1 = convert_opdat_to_csv('<input path of op.dat>', '<output path of csv>')```
-In ```process_res.py```
+In ```process_op.py```\
+```df1 = convert_opdat_to_csv('<input path of op.dat>', '<output path of csv>')```\
+In ```process_res.py```\
 ```df1 = convert_res_to_csv('<input path of res.dat>', '<output path of csv>')```
 
 For the use of GAMA model, there are 3 GAMA files: ```seasonal_result.gaml```,```daily_result.gaml```,```eco_model.gaml```
 
 1: ```seasonal_result.gaml,```
 This GAMA model will visualize the seasonal result (op file) for all 3 scenarios including **Rice Yield; Irrigation; Methane Emission**. 
-There are 3 experiments corresponding to 3 indicators. 
+There are 3 experiments corresponding to 3 indicators. \
 ![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20105525.png)
 ![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20105316.png)
 	                 Irrigation Experiment for water-use visualization
@@ -220,17 +220,17 @@ action load_data {
 2: ```daily_result.gaml```
 This GAMA model will visualize the daily result (res file) and you can choose 2 scenarios to compare the water level, Leaf Area Index (LAI), emission in a selected season together. 
 There are 2 experiments: water_level, emission 
-![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20153934.png)
-	a. **water_level**
-		This experiment contains plot map to visualize the water level for 2 practices. It also has 2 charts to show water level and LAI
+![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20153934.png)\
+	a. **water_level**\
+		This experiment contains plot map to visualize the water level for 2 practices. It also has 2 charts to show water level and LAI\
 		![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20155308.png)
-		You can select Scenario and Season to compare the result (reload experiment is required). In Season selection, I still use the season index for selection 
-	b, **emission**
+		You can select Scenario and Season to compare the result (reload experiment is required). In Season selection, I still use the season index for selection<br /> 
+	b. **emission**\
 		This experiment contains 4 charts corresponding for 4 indicators that could be simulated in ORYZA: NO2; CO2; Soil Organic Carbon, CH4
 		![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20162713.png)
 		You can select Scenario and Season to compare the result (reload experiment is required)
 	
-3: ```eco_model.gaml```
+3: ```eco_model.gaml```<br /> 
 This GAMA model will use the seasonal results (yield simulation results) as an aspect for the farmer to make a practice decision after a season. However this model only compare 2 practices in a scenario, if you want to compare in other scenarios you have to change the path of op file in ```action load_data```
 ```
 action load_data {
@@ -241,36 +241,36 @@ action load_data {
 So there are 10 rice seasons which are Winter-Spring and Summer-Autumn (double rice) from 2015 - 2020. 
 
 At the beginning of the simulation (Winter-Spring 2015-2016), we initialize a number of farmers who use AWD practice (in this case is 40). Then after every season, CF farmers will compare their own income to the average income of nearby AWD farmers. If the AWD farmers' average income is higher by a certain threshold, the CF farmer will consider switching
-![](https://github.com/danghh333/gama-oryza/blob/main/images/Eco.drawio%201.png)
+![](https://github.com/danghh333/gama-oryza/blob/main/images/Eco.drawio%201.png)<br /> 
 In this model, there are 2 species
 1. Plot
 2. Farmer
 
-1: Plot
-	Created and got info from the shapefile which has
-		land_use
-		area
-		plot_id
-2: Farmer 
+1: Plot<br /> 
+	Created and got info from the shapefile which has<br /> 
+		land_use<br /> 
+		area<br /> 
+		plot_id<br /> 
+2: Farmer <br /> 
 	Each farmer owns a plot and they can decide which practice they will apply on their plot (AWD or CF)
-	For the economic aspect, each farmer has
-	- Revenue
-	- Cost 
-	- Profit
+	For the economic aspect, each farmer has<br /> 
+	- Revenue<br /> 
+	- Cost <br /> 
+	- Profit<br /> 
 	Revenue of each farmer is calculated by the yield multiplies with farmer area and rice price.
 	```
 	current_revenue <- current_yield * (my_plot.area) * rice_price; // yield(kg/ha)*area(ha)*price(VND/kg)
 	```
-And on the market, there are some factors relating to price/cost. These factors you can change during the simulation
-	- Rice price
-	- Fertilizer cost, seed cost, other cost
-	![](https://github.com/danghh333/gama-oryza/blob/main/images/Pasted%20image%2020251024163152.png)
+And on the market, there are some factors relating to price/cost. These factors you can change during the simulation<br /> 
+	- Rice price<br /> 
+	- Fertilizer cost, seed cost, other cost<br /> 
+	![](https://github.com/danghh333/gama-oryza/blob/main/images/Pasted%20image%2020251024163152.png)<br /> 
 The unit for economic factors is VND
 
-The simulation visual has 3 elements:
-- Plot window: Visualize the change of irrigation practice by farmer
-- AWD Adoption rate chart: Percentage of farmer switching to AWD
-- Income per ha: The change of farmer income per ha between 2 practices
+The simulation visual has 3 elements:<br /> 
+- Plot window: Visualize the change of irrigation practice by farmer<br /> 
+- AWD Adoption rate chart: Percentage of farmer switching to AWD<br /> 
+- Income per ha: The change of farmer income per ha between 2 practices<br /> 
 ![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20163239.png)
 
 
