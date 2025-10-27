@@ -1,0 +1,24 @@
+*---Run set 2: Continuously flooded 
+IYEAR = 2016
+EMYR = 2016
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0    
+
+*---Run set 2: Alternate Wetting and Drying (AWD)
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2016
+EMYR = 2016
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0  

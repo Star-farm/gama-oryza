@@ -1,0 +1,174 @@
+*---Run set 6: Continuously flooded 
+IYEAR = 2015
+EMYR = 2015
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0 
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value   
+
+*---Run set 6: Alternate Wetting and Drying (AWD)
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2015
+EMYR = 2015
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0   
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value   
+
+*---Run set 7: Continuously flooded 
+IYEAR = 2016
+EMYR = 2016
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0 
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value    
+
+*---Run set 7: Alternate Wetting and Drying (AWD)
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2016
+EMYR = 2016
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value      
+
+*---Run set 8: Continuously flooded 
+IYEAR = 2017
+EMYR = 2017
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value       
+
+*---Run set 8: Alternate Wetting and Drying (AWD)
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2017
+EMYR = 2017
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value      
+
+*---Run set 9: Continuously flooded 
+IYEAR = 2018
+EMYR = 2018
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value       
+
+*---Run set 9: Alternate Wetting and Drying (AWD)
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2018
+EMYR = 2018
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value      
+
+*---Run set 10: Continuously flooded 
+IYEAR = 2019
+EMYR = 2019
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value       
+
+*---Run set 10: Alternate Wetting and Drying (AWD)
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2019
+EMYR = 2019
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value     
+
+*---Run set 11: Continuously flooded 
+IYEAR = 2020
+EMYR = 2020
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value       
+
+*---Run set 11: Alternate Wetting and Drying (AWD)
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2020
+EMYR = 2020
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0
+TMCTB = 0.0, 5.0,   !* Daily average temperature increment table (oC)
+      366.0, 5.0    ! Column 1: Julian day, Column 2: change value   
+

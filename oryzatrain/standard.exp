@@ -1,0 +1,277 @@
+*--------------------------------------------------------------------*
+* EXPERIMENTAL DATA FILE                                             *
+*                                                                    *
+* File name        : (user defined)                                  *
+* Crop             : (user defined)                                  *
+* Year/Season      : (user defined)                                  *
+* Additional info  : (user defined)                                  *
+* Note: Three markers for variable definition, with ! only or no     *
+*       definition, value(s) must be given, with !@ value must switch*
+*       among given, with !* the variable and values can be commented*
+*       out                                                          *
+*--------------------------------------------------------------------*
+
+* @* 1. Selection of modes of running                                   *
+* @*--------------------------------------------------------------------*
+* @*--  RUNMODE: mode of running ORYZA
+RUNMODE = 'EXPERIMENT'       !@ ORYZA simulates particular experiment
+* @*RUNMODE ='EXPLORATION'      ! ORYZA used for exploraton
+* @
+* @*--  ETMOD is method for evapotranspiration calculation:
+PRODENV = 'WATER BALANCE'
+
+*NITROENV = 'POTENTIAL'
+NUTRIENT = 'GENERAL SOM' ! Requires data of soil chemical propeties such as organic carbon and nitrogen and mineral nitrogen content (defined in soil file)
+*NUTRIENT = 'FIXED SUPPLY' 
+NITROENV = 'NITROGEN BALANCE'
+WATBAL = 'PADDY'
+ETMOD = 'PENMAN'            !@ Penman-based (Van Kraalingen & Stol,1996)
+* @*ETMOD = 'PRIESTLY TAYLOR'  ! Priestly-Taylor (")
+* @*ETMOD = 'MAKKINK'           ! Makkink (Van Kraalingen & Stol, 1996)
+* @
+* @*--------------------------------------------------------------------*
+* @* 2. Timer data for simulation                                       *
+* @*--------------------------------------------------------------------*
+IYEAR = 2015
+STTIME = 300.
+FINTIM = 1000.
+DELT   = 1.                  ! Time step   (day)
+
+* @
+* @*--------------------------------------------------------------------*
+* @* 3. Weather station and climatic change for simulation                *
+* @*--------------------------------------------------------------------*
+ANGA = 0.29                  ! Angstrom A parameter
+ANGB = 0.45                  ! Angstrom B parameter
+* @
+FAOF  = 1.          ! MultipL. factor for pot. evapotranspiration (FAO)
+* @                    ! Value Murty & Tuong
+* @
+TMPSB = 0.          ! Temperature increase in seed-bed due to cover:
+* @! Zero when no cover over seed-bed; 9.5 with seed-bed
+* @*CO2A = 0.,375.,           !* Table for daily ambient CO2 concentration AFTER EMERGENCY
+* @*       1.,400.,           ! if this table appear, its value will overwrite the value
+* @*       5.,400.,           ! of CO2 in crop file.
+* @*       6.,720.,           ! Please pay attention on the CO2 concentration in crop
+* @*      50.,720.,           ! and experiment files to make them compatible except for
+* @*      51.,375.,           ! CO2 testing period during crop growth
+* @*     150.,375.            ! Note: column one is the DAYS AFTER EMERGENCY
+TMCTB = 0.0, 0.0,   !* Daily average temperature increment table (oC)
+      366.0, 0.0    ! Column 1: Julian day, Column 2: change value
+* @*TMAXCTB = 0.0, 0.0, !* Daily maximum temperture change, either TMCTB or TMAXCTB
+* @*      366.0, 0.0    ! Column 1: Julian; Column 2: Increment value (oC)
+* @*TMINCTB = 0.0,0.0,  !* Daily minimum temperture change, use with TMAXCTB
+* @*      366.0, 0.0    ! Column 1: Julian day; Colum 2: Increment (oC)
+* @*RADCTB = 0.0, 0.0,  !* Total daily radiation change
+* @*      190.0, 0.0,   ! Column 1: Julian day; Column 2: change percentage (%)
+* @*      191.0, -5.0,
+* @*      366.0, -5.0
+* @*XFRDIF = 0.0        !* How you count diffusive radiation change?
+* @*                    ! 0: no change
+* @*                    ! 1: change in percentage based theoretical fraction
+* @*                    ! 2: Change with given diffusive radiation fraction
+* @*FRDIFCTB = 0.0,0.0, !* Diffusive radiation change table if XFRDIF>0
+* @*         366.0,0.0  ! Column 1: julian day; Column 2: change value (% or-)
+*FRINCTB = 0.0,-25.0,  !* Rainfall change table
+*        366.0,-25.0  ! Column 1: julian day; Column 2: change value (%)
+* @*CCYEAR = 2008       !* The starting year for climate change computation*
+* @
+* @*FRINCTB = 0.0,0.0,  !* Rainfall change table
+* @*         366.0,0.0  ! Column 1: julian day; Column 2: change value (%)
+* @*VAPPCTB = 0.0,0.0,  !*vapor pressure change table
+* @*         366.0,0.0  ! Column 1: julian day; Column 2: change value (% or-)
+* @*WINDCTB = 0.0,0.0,  !* Wind speed change table
+* @*         366.0,0.0  ! Column 1: julian day; Column 2: change value (% or-)
+* @
+WTRDIR = 'C:\oryzatrain\test_data\ORYZA_weather_data\rach_gia\'
+CNTR = 'rachgia'
+ISTN = 2
+MULTIY = 'NO'
+* @*--------------------------------------------------------------------*
+* @* 4. Establishment data
+* @*--------------------------------------------------------------------*
+* @
+ESTAB = 'DIRECT-SEED'
+EMD = 300
+EMYR = 2015
+SBDUR = 0
+*IDOYPI = 228
+*IYRPI = 2015
+
+*ESTAB = 'TRANSPLANT'
+*EMD = 310
+*EMYR = 2015
+*SBDUR = 12 ! duration from emergence to transplanting
+
+* @*--------------------------------------------------------------------*
+* @* 5. Management parameters                                           *
+* @*--------------------------------------------------------------------*
+* @*-- Initial data at emergence, for either direct-seeding or seed-bed
+* @*   Standard data used.
+*NPLH = 5. ! number of plants per hill
+*NH = 30.  ! number of hill per m2
+*NPLSB = 1000. ! number of plants in seed-bed (/m2)
+
+
+DVSIMAX = 2.0       ! DVS after which no more irrigation is applied
+LAPE   = 0.0001     ! Initial leaf area per plant
+DVSI   = 0.0        ! Initial development stage
+WLVGI  = 0.0        ! Initial leaf weight
+WSTI   = 0.0        ! Initial stem weight
+WRTI   = 0.0        ! Initial stem weight
+WSOI   = 0.0        ! Initial weight storage organs
+ZRTI   = 0.0001     ! Initial root depth (m)
+* @PHTI   = 0.4        ! Initial plant height for crop in ratoon or forced initial (m)
+NPLDS = 132.        ! number of plants/m2 with direct-seeding
+
+
+ZRTTR = 0.05        ! root-depth at transplanting (m)
+* @*---------------------------------------------------------------*
+* @* 6. Irrigation parameters
+* @* Need only to be filled-in when PRODENV = 'WATER BALANCE'
+* @*---------------------------------------------------------------*
+* @
+*AUTODEPT = -10.0   ! The surface water depth (mm) for determining irrigation 
+                   ! amount automatically        
+                   ! Function is disabled when it did not appear or with 
+                   ! negative number
+
+ICOMBA = 4
+
+IRRI2 = 50.0   !Amount of water applied (mm) per irrigation event
+WL0MIN = 20.0 !Minimum standing water depth (mm) maintained from surface
+
+IRRI3 = 50.0
+KPAMIN = 8.0 !threshold for AWD kPa (10-15cm), supply minimum soil water potential (kPa)
+SLMIN3 = 2 !soil layer to monitor
+
+IRRI4 = 50.0
+WCMIN = 0.50 !threshold soil water content (m3m-3), critical soil water content at layer SLMIN4 for  
+             ! irrigation applied 
+SLMIN4 = 2
+
+IRRI5 = 50.
+WL0DAY = 3
+
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 5.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 5.0,      ! Switch to AWD
+         80.0, 0.0      ! Drain the plot for harvesting
+
+
+* @*--------------------------------------------------------------------*
+* @* 7. Nitrogen parameters                                             *
+* @*--------------------------------------------------------------------*
+* @
+* @*--------------------------------------------------------------------*
+* @*  Temperature control experiment parameters
+* @ISTEMC = 0   ! WHETHER USE TEMPERATURE CONTROL 0 = NO,
+* @*            ! 1= NIGHT CONTROL, 2=DAY CONTROL, 3=Both Control
+* @
+* @SHOUR  = 19.   ! Start time for temperature control
+* @EHOUR  = 5.    ! End time for temperature control
+* @*The SHOUR and EHOUR define the night time period, it should be SHOUR>EHOUR
+* @
+* @SDAY   = 202.  ! Julian day temperature control starts
+* @TSYEAR = 1989.
+* @EDAY   = 303.  ! Julian day temperature control ends
+* @TEYEAR = 1989.
+* @TTEMPD = 28.   ! Target, -999 means net change is used
+* @TTEMPN = 21.   ! Target temperature for nighttime,
+* @               ! -999 means net change is used
+* @TCHANG = -999. ! Net change of temperature,
+* @               ! -999 means target temperature is used
+* @CONTRM = 2     ! 1 = Control the min temperature (i.e. temperature >= target)
+* @               ! 2 = Constant temperature
+* @      ! 3 = Control the max temperature (i.e. temperature <= target)
+* Define fertization usage here: 100kg N Fertilizer
+FERTIL = 0.0, 0.0,
+         7.0, 28.0,
+         8.0, 0.0,
+        25.0, 42.0,
+        26.0, 0.0,
+        50.0, 30.0,
+        41.0, 0.0,
+       180.0, 0.0
+
+RECNIT = 
+    0.0, 0.30, 
+    0.2, 0.35, 
+    0.4, 0.50, 
+    0.8, 0.75, 
+    1.0, 0.75, 
+    2.5, 0.75 
+
+*--------------------------------------------------------------------*
+* 8. Measured data for model calibration and comparison              *
+*    And option to force measured LAI during simulation              *
+*    (instead of using simulated values)                             *
+*--------------------------------------------------------------------*
+
+LAI_OBS =
+2015., 354., 0.1
+2015., 371., 0.20
+2016., 30., 3.30
+2016., 43., 3.9
+LAI_FRC = 0
+
+IDOYTR = 187    ! Day of transplanting (give 0 if direct-seeded) 
+IYRTR  = 2015   ! Year of transplanting (give 0 if direct-seeded) 
+IDOYPI = 228 ! Day of panicle initiation (estimated as same day as  
+! jointing) 
+IYRPI  = 2015  ! Year of panicle initiation 
+IDOYFL = 260   ! Day of flowering 
+IYRFL  = 2015  ! Year of flowering 
+IDOYM  = 288   ! Day of maturity (estimated as 7 d before harvest) 
+IYRM   = 2015  ! Year of maturity 
+
+WLVG_OBS = 
+2008.00,   209.00,   176.69, 
+2008.00,   222.00,   995.2, 
+2008.00,   234.00,   2189.9, 
+2008.00,   250.00,   2320.4, 
+2008.00,   263.00,   2580.00, 
+2008.00,   280.00,   2262.19, 
+2008.00,   295.00,   1189.4 
+*!* Dead leaf dry wt (kg/ha) 
+WLVD_OBS = 
+2008.00,   209.00,   0.00, 
+2008.00,   222.00,   0.00, 
+2008.00,   234.00,   0.00, 
+2008.00,   250.00,   343.3, 
+2008.00,   263.00,   516.69, 
+2008.00,   280.00,   1530.00, 
+2008.00,   295.00,   2109.2 
+*!* Stem dry wt (kg/ha) 
+WST_OBS = 
+2008.00,   209.00,   306.69, 
+2008.00,   222.00,   1054.5, 
+2008.00,   234.00,   2315.5, 
+2008.00,   250.00,   3029.00, 
+2008.00,   263.00,   3386.69, 
+2008.00,   280.00,   3621.4, 
+2008.00,   295.00,   2812.3 
+*!* Panicle dry wt (kg/ha) 
+WSO_OBS = 
+2008.00,   209.00,   0.00, 
+2008.00,   222.00,   0.00, 
+2008.00,   234.00,   0.00, 
+2008.00,   250.00,   0.00, 
+2008.00,   263.00,   663.2, 
+2008.00,   280.00,   3317.39, 
+2008.00,   295.00,   5850.89 
+*!* Total dry wt (kg/ha) 
+WAGT_OBS = 
+2008.00,   209.00,   483.39, 
+2008.00,   222.00,   2049.69, 
+2008.00,   234.00,   4505.39, 
+2008.00,   250.00,   5892.69, 
+2008.00,   263.00,   6946.59, 
+2008.00,   280.00,   10731.00, 
+2008.00,   295.00,   11961.79 
+
+CH4APPS = 'GENERAL'
+
+HARFRAC=0.5
+STUBBLDD = 15.0, 15.0

@@ -1,0 +1,65 @@
+*---Run set 2: Continuously flooded 
+IYEAR = 2011
+EMYR = 2011
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0  
+
+FRINCTB = 0.0,0.0,  !* Rainfall change table
+         366.0,0.0  ! Column 1: julian day; Column 2: change value (%)  
+
+*---Run set 2: Alternate Wetting and Drying (AWD)
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2011
+EMYR = 2011
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0
+
+FRINCTB = 0.0,0.0,  !* Rainfall change table
+         366.0,0.0  ! Column 1: julian day; Column 2: change value (%)
+
+*---Run set 2: Continuously flooded with temp changing
+IYEAR = 2011
+EMYR = 2011
+SWITPD = 0
+IRMTAB = 0.0, 0.0,     
+         8.0, 2.0,
+         85.0, 2.0,    
+         86.0, 0.0,    
+         180.0, 0.0   
+
+FRINCTB = 0.0,-25.0,  !* Rainfall change table
+         366.0,-25.0  ! Column 1: julian day; Column 2: change value (%)
+
+*---Run set 2: Alternate Wetting and Drying (AWD) with temp changing
+* Allow field to dry to 8 kPa soil water potential before re-flooding
+IYEAR = 2011
+EMYR = 2011
+SWITPD = 0
+IRMTAB = 0.0, 0.0,
+         8.0, 2.0,    
+         21.0, 3.0,
+         41.0, 2.0,
+         46.0, 3.0,     
+         60.0, 2.0,    
+         76.0, 3.0,    
+         86.0, 0.0,     
+         180.0, 0.0  
+
+FRINCTB = 0.0,-25.0,  !* Rainfall change table
+         366.0,-25.0  ! Column 1: julian day; Column 2: change value (%)
+
+   
+
+  

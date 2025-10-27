@@ -1,0 +1,369 @@
+
+ File .\SCENE1\CF_S1.RER contains   10 set(s) of  6 variable(s):
+ type sc/ar variable name
+ ---- ----- -------------
+  I     s   IYEAR                          
+  I     s   EMYR                           
+  F     s   STTIME                         
+  I     s   EMD                            
+  I     s   SWITPD                         
+  F     a   IRMTAB                         
+
+ = Data file contents (set 0) selected =
+ Message from RDSETS: A logfile report is written
+ about the use of the 10 parameter sets on .\scene1\CF_s1.rer
+
+ = Set    1 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Data file   .\STANDARD.EXP with  65 variables parsed by RDINDX
+   Variable values have been overwritten by rerun set    1:
+   EMD -----> 300   
+   EMYR -----> 2015   
+   STTIME -----> 300.0   
+   IYEAR -----> 2015   
+ Contents of CONTROL.DAT recovered from TMP file
+ Data file   .\STANDARD2.CRP with  50 variables parsed by RDINDX
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    1:
+   EMYR -----> 2015   
+   EMD -----> 300   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Data file   .\STANDARD.SOL with  50 variables parsed by RDINDX
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    1:
+   IRMTAB -----> 300.0, 2.000, 23.00, 0.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    1:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set    2 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    2:
+   EMD -----> 80   
+   EMYR -----> 2016   
+   STTIME -----> 80.00   
+   IYEAR -----> 2016   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    2:
+   EMYR -----> 2016   
+   EMD -----> 80   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    2:
+   IRMTAB -----> 80.00, 2.000, 168.0, 0.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    2:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set    3 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    3:
+   EMD -----> 300   
+   EMYR -----> 2016   
+   STTIME -----> 300.0   
+   IYEAR -----> 2016   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    3:
+   EMYR -----> 2016   
+   EMD -----> 300   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    3:
+   IRMTAB -----> 300.0, 2.000, 23.00, 0.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    3:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set    4 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    4:
+   EMD -----> 80   
+   EMYR -----> 2017   
+   STTIME -----> 80.00   
+   IYEAR -----> 2017   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    4:
+   EMYR -----> 2017   
+   EMD -----> 80   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    4:
+   IRMTAB -----> 80.00, 2.000, 168.0, 0.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    4:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set    5 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    5:
+   EMD -----> 300   
+   EMYR -----> 2017   
+   STTIME -----> 300.0   
+   IYEAR -----> 2017   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    5:
+   EMYR -----> 2017   
+   EMD -----> 300   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    5:
+   IRMTAB -----> 300.0, 2.000, 23.00, 0.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    5:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set    6 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    6:
+   EMD -----> 80   
+   EMYR -----> 2018   
+   STTIME -----> 80.00   
+   IYEAR -----> 2018   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    6:
+   EMYR -----> 2018   
+   EMD -----> 80   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    6:
+   IRMTAB -----> 80.00, 2.000, 168.0, 0.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    6:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set    7 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    7:
+   EMD -----> 300   
+   EMYR -----> 2018   
+   STTIME -----> 300.0   
+   IYEAR -----> 2018   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    7:
+   EMYR -----> 2018   
+   EMD -----> 300   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    7:
+   IRMTAB -----> 300.0, 2.000, 23.00, 2.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    7:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set    8 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    8:
+   EMD -----> 80   
+   EMYR -----> 2019   
+   STTIME -----> 80.00   
+   IYEAR -----> 2019   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    8:
+   EMYR -----> 2019   
+   EMD -----> 80   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    8:
+   IRMTAB -----> 80.00, 2.000, 168.0, 0.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    8:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set    9 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    9:
+   EMD -----> 300   
+   EMYR -----> 2019   
+   STTIME -----> 300.0   
+   IYEAR -----> 2019   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    9:
+   EMYR -----> 2019   
+   EMD -----> 300   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set    9:
+   IRMTAB -----> 300.0, 2.000, 23.00, 2.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set    9:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+
+ = Set   10 of rerun file .\SCENE1\CF_S1.RER selected =
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set   10:
+   EMD -----> 80   
+   EMYR -----> 2020   
+   STTIME -----> 80.00   
+   IYEAR -----> 2020   
+ Contents of CONTROL.DAT recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set   10:
+   EMYR -----> 2020   
+   EMD -----> 80   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+   Variable values have been overwritten by rerun set   10:
+   IRMTAB -----> 80.00, 2.000, 168.0, 0.000   
+ Contents of .\STANDARD.SOL recovered from TMP file
+   Variable values have been overwritten by rerun set   10:
+   SWITPD -----> 1   
+ Contents of .\STANDARD2.CRP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.EXP recovered from TMP file
+ Contents of .\STANDARD.SOL recovered from TMP file
+ Temporary file RD$00001.TMP deleted by RDDTMP
+ Temporary file RD$00002.TMP deleted by RDDTMP
+ Temporary file RD$00003.TMP deleted by RDDTMP
+ Temporary file RD$00004.TMP deleted by RDDTMP
+ Temporary file .\SCENE1\CF_S1.TMP deleted by RDDTMP

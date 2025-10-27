@@ -1,0 +1,7 @@
+*---Run set 1: Continuously flooded
+SWITPD = 1
+IRMTAB = 0.0, 0.0,
+		  8.0, 2.0,
+		 85.0, 2.0,
+        86.0, 0.0,
+       180.0, 0.0

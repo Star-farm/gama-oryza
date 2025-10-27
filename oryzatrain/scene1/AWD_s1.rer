@@ -1,0 +1,122 @@
+*AWD
+*---Run set 1: Winter-Spring 2015-2016'
+IYEAR = 2015
+EMYR = 2015
+STTIME = 300.
+EMD = 300
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+
+*---Run set 2: Summer-Autumn 2016
+IYEAR = 2016
+EMYR = 2016
+STTIME = 80.
+EMD = 80
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+*---Run set 3: Winter-Spring 2016-2017
+IYEAR = 2016
+EMYR = 2016
+STTIME = 300.
+EMD = 300
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+*---Run set 4: Summer-Autumn 2017
+IYEAR = 2017
+EMYR = 2017
+STTIME = 80.
+EMD = 80
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+*---Run set 5: Winter-Spring 2017-2018
+IYEAR = 2017
+EMYR = 2017
+STTIME = 300.
+EMD = 300
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+*---Run set 6: Summer-Autumn 2018
+IYEAR = 2018
+EMYR = 2018
+STTIME = 80.
+EMD = 80
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+*---Run set 7: Winter-Spring 2018-2019
+IYEAR = 2018
+EMYR = 2018
+STTIME = 300.
+EMD = 300
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+*---Run set 8: Summer-Autumn 2019
+IYEAR = 2019
+EMYR = 2019
+STTIME = 80.
+EMD = 80
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+*---Run set 9: Winter-Spring 2019-2020
+IYEAR = 2019
+EMYR = 2019
+STTIME = 300.
+EMD = 300
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+
+*---Run set 10: Summer-Autumn 2020
+IYEAR = 2020
+EMYR = 2020
+STTIME = 80.
+EMD = 80
+SWITPD = 1
+IRMTAB = 0.0, 2.0,    ! Keep the plot flooding
+         8.0, 3.0,    ! After 1 week switch to AWD
+         60.0, 2.0,    ! Keep the plot flooding during flowering
+         72.0, 3.0,      ! Switch to AWD
+         85.0, 0.0      ! Drain the plot for harvesting
+        
