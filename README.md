@@ -3,48 +3,45 @@
 1. Introduction
 2. Simulation platforms
 	1. ORYZA
-		1. Prepare for the inputs
-		2. Scenario
-		3. Run the simulation
+	    - Prepare for the inputs
+		- Scenario
+		- Run the simulation
 	2. GAMA
-		0. Format processing
-		1. daily_result model
-		2. seasonal_result model
-		3. eco model
-
-
+		- Format processing
+		- daily_result model
+		- seasonal_result model
+		- eco model
 
 # Introduction
 
 This repo combines **crop simulation modeling** with **agent-based modeling** to understand both the rice performance and socio-economic adoption patterns of different water management strategies in rice farming.
 
 In this experiment, I want to compare 2 water management practices (Continuous Flooding & Alternate Wetting and Drying) to see how it affects on the rice yield, water usage, emissions. And then a farmer decision-making model will simulate the decision of farmer whether to choose CF or AWD based on the economic aspects.
-
 2 Irrigation practices for comparison
-**Continuous Flooding (CF)**: 
+1. **Continuous Flooding (CF)**: 
 	The traditional method where rice fields (paddies) are kept continuously flooded with 5-10 cm of standing water throughout most of the growing season
-    **Advantages**:
-    - Familiar to farmers (traditional practice)
-    - Suppresses weeds effectively
-    - Generally stable yields
-    - Lower risk of crop stress
-    **Disadvantages**:
-    - Very high water consumption (can use 1,500-2,000 mm of water per season)
-    - Higher methane emissions
-    - Not sustainable in water-scarce regions
+    - **Advantages**:
+        - Familiar to farmers (traditional practice)
+        - Suppresses weeds effectively
+        - Generally stable yields
+        - Lower risk of crop stress
+    - **Disadvantages**:
+        - Very high water consumption (can use 1,500-2,000 mm of water per season)
+        - Higher methane emissions
+        - Not sustainable in water-scarce regions
 
-**Alternate Wetting and Drying (AWD)**:
+2. **Alternate Wetting and Drying (AWD)**:
 	A water-saving technique where irrigation water is applied to flood the field, then allowed to dry down to a certain level (usually 15 cm below soil surface) before re-flooding
-	 **Advantages**:
-    - Saves 15-30% water compared to CF
-    - Reduces methane emissions
-    - Can maintain yields if managed properly
-	 **Disadvantages**:
-    - Requires more careful monitoring
-    - Risk of yield reduction if soil dries too much
-    - Farmers may be hesitant to adopt (unfamiliar practice)
-    - Requires proper drainage infrastructure
-    - 
+    - **Advantages**:
+        - Saves 15-30% water compared to CF
+        - Reduces methane emissions
+        - Can maintain yields if managed properly
+    - **Disadvantages**:
+        - Requires more careful monitoring
+        - Risk of yield reduction if soil dries too much
+        - Farmers may be hesitant to adopt (unfamiliar practice)
+        - Requires proper drainage infrastructure
+
 I compared double-rice season (Winter-Spring and Summer-Autumn) with 2 water management practices under 3 scenarios from 2015 to 2020 in Kien Giang (old)
 - Baseline (in normal condition)
 - Temperature rises 2℃
@@ -52,6 +49,7 @@ I compared double-rice season (Winter-Spring and Summer-Autumn) with 2 water man
 
 # Simulation platform
 ## ORYZA
+Version 3.5
 A platform that simulate rice crop growth based on inputs like weather, soil type, management practices.
 ### Preparing the ORYZA Simulation inputs
 
@@ -125,13 +123,14 @@ You will run the CF and AWD simulations for each of these scenarios to compare t
 
 ### How to run the simulation
 
-Select your scenario by choose the corresponding path. I've created 3 folders for 3 scenarios and each folder has 2 rerun files: CF, AWD.\
-Scenario 1: ```\oryzatrain\scene1\CF_s1.rer```\
-		```\oryzatrain\scene1\AWD_s1.rer```\
-Scenario 2: ```\oryzatrain\scene2\CF_s2.rer```\
-		``` \oryzatrain\scene2\AWD_s2.rer```\
-Scenario 3: ```\oryzatrain\scene3\CF_s3.rer```\
-		```\oryzatrain\scene3\AWD_s3.rer```\
+Select your scenario by choose the corresponding path. I've created 3 folders for 3 scenarios and each folder has 2 rerun files: CF, AWD.
+- Scenario 1: ```\oryzatrain\scene1\CF_s1.rer```
+		```\oryzatrain\scene1\AWD_s1.rer```
+- Scenario 2: ```\oryzatrain\scene2\CF_s2.rer```
+		``` \oryzatrain\scene2\AWD_s2.rer```
+- Scenario 3: ```\oryzatrain\scene3\CF_s3.rer```
+		```\oryzatrain\scene3\AWD_s3.rer```
+
 For example, if you want to simulate **CF** practice when **the temperature rises 2℃**, you will set path of that scenario and practice control file (```CONTROL.DAT```). 
 This file used to control the simulation of ORYZA (Input/Output file path and options for output display)
 ```
@@ -199,7 +198,7 @@ In ```process_res.py```\
 
 For the use of GAMA model, there are 3 GAMA files: ```seasonal_result.gaml```,```daily_result.gaml```,```eco_model.gaml```
 
-1: ```seasonal_result.gaml,```
+1. ```seasonal_result.gaml,```
 This GAMA model will visualize the seasonal result (op file) for all 3 scenarios including **Rice Yield; Irrigation; Methane Emission**. 
 There are 3 experiments corresponding to 3 indicators. \
 ![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20105525.png)
@@ -217,61 +216,58 @@ action load_data {
 	awd_s3 <- csv_file("../includes/Results/AWD_s3/awd_op.csv");
 }
 ```
-2: ```daily_result.gaml```
+2. ```daily_result.gaml```
 This GAMA model will visualize the daily result (res file) and you can choose 2 scenarios to compare the water level, Leaf Area Index (LAI), emission in a selected season together. 
 There are 2 experiments: water_level, emission 
 ![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20153934.png)\
-	a. **water_level**\
+    1. **water_level**\
 		This experiment contains plot map to visualize the water level for 2 practices. It also has 2 charts to show water level and LAI\
 		![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20155308.png)
 		You can select Scenario and Season to compare the result (reload experiment is required). In Season selection, I still use the season index for selection<br /> 
-	b. **emission**\
+    2. **emission**\
 		This experiment contains 4 charts corresponding for 4 indicators that could be simulated in ORYZA: NO2; CO2; Soil Organic Carbon, CH4
 		![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20162713.png)
 		You can select Scenario and Season to compare the result (reload experiment is required)
 	
-3: ```eco_model.gaml```<br /> 
-This GAMA model will use the seasonal results (yield simulation results) as an aspect for the farmer to make a practice decision after a season. However this model only compare 2 practices in a scenario, if you want to compare in other scenarios you have to change the path of op file in ```action load_data```
-```
-action load_data {
-	cf_s1 <- csv_file("../includes/Results/CF_s1/cf_op.csv");
-	awd_s1 <- csv_file("../includes/Results/AWD_s1/awd_op.csv");
-}
-```
-So there are 10 rice seasons which are Winter-Spring and Summer-Autumn (double rice) from 2015 - 2020. 
+3. ```eco_model.gaml```
+    This GAMA model will use the seasonal results (yield simulation results) as an aspect for the farmer to make a practice decision after a season. However this model only compare 2 practices in a scenario, if you want to compare in other scenarios you have to change the path of op file in ```action load_data```
+    ```
+    action load_data {
+    	cf_s1 <- csv_file("../includes/Results/CF_s1/cf_op.csv");
+    	awd_s1 <- csv_file("../includes/Results/AWD_s1/awd_op.csv");
+    }
+    ```
+    So there are 10 rice seasons which are Winter-Spring and Summer-Autumn (double rice) from 2015 - 2020. 
 
-At the beginning of the simulation (Winter-Spring 2015-2016), we initialize a number of farmers who use AWD practice (in this case is 40). Then after every season, CF farmers will compare their own income to the average income of nearby AWD farmers. If the AWD farmers' average income is higher by a certain threshold, the CF farmer will consider switching
-![](https://github.com/danghh333/gama-oryza/blob/main/images/Eco.drawio%201.png)<br /> 
-In this model, there are 2 species
-1. Plot
-2. Farmer
-
-1: Plot<br /> 
-	Created and got info from the shapefile which has<br /> 
-		land_use<br /> 
-		area<br /> 
-		plot_id<br /> 
-2: Farmer <br /> 
-	Each farmer owns a plot and they can decide which practice they will apply on their plot (AWD or CF)
-	For the economic aspect, each farmer has<br /> 
-	- Revenue<br /> 
-	- Cost <br /> 
-	- Profit<br /> 
-	Revenue of each farmer is calculated by the yield multiplies with farmer area and rice price.
-	```
-	current_revenue <- current_yield * (my_plot.area) * rice_price; // yield(kg/ha)*area(ha)*price(VND/kg)
-	```
-And on the market, there are some factors relating to price/cost. These factors you can change during the simulation<br /> 
-	- Rice price<br /> 
-	- Fertilizer cost, seed cost, other cost<br /> 
+    At the beginning of the simulation (Winter-Spring 2015-2016), we initialize a number of farmers who use AWD practice (in this case is 40). Then after every season, CF farmers will compare their own income to the average income of nearby AWD farmers. If the AWD farmers' average income is higher by a certain threshold, the CF farmer will consider switching
+    ![](https://github.com/danghh333/gama-oryza/blob/main/images/Eco.drawio%201.png)<br />
+	In this model, there are 2 species
+	1. Plot <br />
+		Created and got info from the shapefile which has<br /> 
+		- land_use
+		- area 
+		- plot_id 
+	2. Farmer <br /> 
+		Each farmer owns a plot and they can decide which practice they will apply on their plot (AWD or CF)
+		For the economic aspect, each farmer has<br /> 
+		- Revenue<br /> 
+		- Cost <br /> 
+		- Profit<br /> 
+		Revenue of each farmer is calculated by the yield multiplies with farmer area and rice price.
+		```
+		current_revenue <- current_yield * (my_plot.area) * rice_price; // yield(kg/ha)*area(ha)*price(VND/kg)
+		```
+	And on the market, there are some factors relating to price/cost. These factors you can change during the simulation<br /> 
+		- Rice price<br /> 
+		- Fertilizer cost, seed cost, other cost<br /> 
 	![](https://github.com/danghh333/gama-oryza/blob/main/images/Pasted%20image%2020251024163152.png)<br /> 
-The unit for economic factors is VND
+		The unit for economic factors is VND
 
-The simulation visual has 3 elements:<br /> 
-- Plot window: Visualize the change of irrigation practice by farmer<br /> 
-- AWD Adoption rate chart: Percentage of farmer switching to AWD<br /> 
-- Income per ha: The change of farmer income per ha between 2 practices<br /> 
-![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20163239.png)
+	The simulation visual has 3 elements:<br /> 
+	- Plot window: Visualize the change of irrigation practice by farmer<br /> 
+	- AWD Adoption rate chart: Percentage of farmer switching to AWD<br /> 
+	- Income per ha: The change of farmer income per ha between 2 practices<br /> 
+	![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20163239.png)
 
 
 
