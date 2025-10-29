@@ -185,6 +185,9 @@ Here's the list of variables in **res.dat** and **op.dat** files
 | S_CH4C        | kg C/ha | Seasonally accumulative CH4 emission                    |
 | DAE           |         | Days after emergence                                    |
 
+
+For more information you can find the ORYZA manual in ```oryzatrain``` folder and you can check this [sheet table](https://docs.google.com/spreadsheets/d/1Im6XVrKtR67UFT2nrhxxbTlJbc4WDTFpVXvmvhssfOI/edit?usp=sharing) which contains input data and parameters in ORYZA
+
 ### GAMA
 
 After running ORYZA simulation, I use GAMA to visualize the results from ORYZA and also as an input for the farmer decision making model.
