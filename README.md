@@ -49,7 +49,7 @@ I compared double-rice season (Winter-Spring and Summer-Autumn) with 2 water man
 
 # Simulation platform
 ## ORYZA
-Version 3.5
+Version 3.5 <br />
 A platform that simulate rice crop growth based on inputs like weather, soil type, management practices.
 ### Preparing the ORYZA Simulation inputs
 
