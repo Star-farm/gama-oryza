@@ -131,8 +131,8 @@ Select your scenario by choose the corresponding path. I've created 3 folders fo
 - Scenario 3: ```\oryzatrain\scene3\CF_s3.rer```
 		```\oryzatrain\scene3\AWD_s3.rer```
 
-For example, if you want to simulate **CF** practice when **the temperature rises 2℃**, you will set path of that scenario and practice control file (```CONTROL.DAT```). 
-This file used to control the simulation of ORYZA (Input/Output file path and options for output display)
+For example, if you want to simulate **CF** practice when **the temperature rises 2℃**, you will set path of that scenario and practice control file at ```FILEIR``` in (```CONTROL.DAT```). 
+This file used to control the simulation of ORYZA (Input/Output file path and option for output display)
 ```
 	CONTROLFILE = 'CONTROL.DAT'
 	FILEON = '.\res.dat'             ! Output file
