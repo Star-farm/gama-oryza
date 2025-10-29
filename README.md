@@ -219,7 +219,7 @@ action load_data {
 2. ```daily_result.gaml```
 This GAMA model will visualize the daily result (res file) and you can choose 2 scenarios to compare the water level, Leaf Area Index (LAI), emission in a selected season together. 
 There are 2 experiments: water_level, emission 
-![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20153934.png)\
+![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20153934.png)
     1. **water_level**\
 		This experiment contains plot map to visualize the water level for 2 practices. It also has 2 charts to show water level and LAI\
 		![](https://github.com/danghh333/gama-oryza/blob/main/images/Screenshot%202025-10-24%20155308.png)
